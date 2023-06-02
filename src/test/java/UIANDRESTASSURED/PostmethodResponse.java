@@ -18,7 +18,11 @@ import org.testng.annotations.Test;
 
 import POJOREQRES.Getresponse;
 import POJOREQRES.POJOResponse;
+import POJOREQRES.PatchRequest;
+import POJOREQRES.PatchResponsePojo;
 import POJOREQRES.PostMethod;
+import POJOREQRES.PutPOJO;
+import POJOREQRES.PutResponsePojo;
 import POM.WEBReposInXpath;
 import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
@@ -30,6 +34,8 @@ public class PostmethodResponse {
 
 	POJOResponse responsePOJO;
 	Getresponse getResponse;
+	PutResponsePojo putresponsePOJO;
+	PatchResponsePojo patchresponsePojo ;
 
 	@Test(priority = 1)
 
@@ -96,5 +102,44 @@ public class PostmethodResponse {
 		Assert.assertEquals(getResponse.getTotal(), 12);
 
 	}
+
+	@Test(priority = 4)
+
+	public void PostMethodResponse() {
+
+		RequestSpecification createOrderBaseReq = new RequestSpecBuilder().setBaseUri("https://reqres.in")
+				.setContentType(ContentType.JSON).build();
+
+		PutPOJO pj = new PutPOJO();
+		pj.setName("nitin");
+		pj.setJob("CSE");
+
+		RequestSpecification createOrderReq = given().log().all().spec(createOrderBaseReq).body(pj);
+		putresponsePOJO = createOrderReq.when().put("/api/users/2").then().log().all().extract().response().body()
+				.as(PutResponsePojo.class);
+
+		Assert.assertEquals(putresponsePOJO.getName(), "nitin");
+	}
+	
+	@Test(priority=5)
+	
+	public void PatchMethodResponse() {
+		
+		RequestSpecification createOrderBaseReq = new RequestSpecBuilder().setBaseUri("https://reqres.in")
+				.setContentType(ContentType.JSON).build();
+		
+		PatchRequest patchrequest = new PatchRequest();
+		patchrequest.setName("john");
+		patchrequest.setJob("whatever");
+		
+		RequestSpecification createOrderReq = given().log().all().spec(createOrderBaseReq).body(patchrequest);
+		 patchresponsePojo = createOrderReq.when().patch("/api/users/2").then().log().all().extract().response().body()
+				.as(PatchResponsePojo.class);
+
+		Assert.assertEquals(patchresponsePojo.getJob(), "whatever");
+	}
+	
+	
+	
 
 }
