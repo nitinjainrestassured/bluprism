@@ -2,31 +2,53 @@
 <testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="18599" started-at="2023-06-02T18:29:34 IST" finished-at="2023-06-02T18:29:53 IST">
+  <suite name="Suite" duration-ms="26845" started-at="2023-06-03T20:44:01 IST" finished-at="2023-06-03T20:44:28 IST">
     <groups>
     </groups>
-    <test name="PostmethodResponse" duration-ms="18599" started-at="2023-06-02T18:29:34 IST" finished-at="2023-06-02T18:29:53 IST">
+    <test name="PostmethodResponse" duration-ms="26845" started-at="2023-06-03T20:44:01 IST" finished-at="2023-06-03T20:44:28 IST">
       <class name="UIANDRESTASSURED.PostmethodResponse">
-        <test-method status="PASS" signature="launchBrowser()[pri:1, instance:UIANDRESTASSURED.PostmethodResponse@5e955596]" name="launchBrowser" duration-ms="14888" started-at="2023-06-02T18:29:34 IST" finished-at="2023-06-02T18:29:49 IST">
+        <test-method status="PASS" signature="setup(java.lang.String)[pri:0, instance:UIANDRESTASSURED.PostmethodResponse@58a90037]" name="setup" is-config="true" duration-ms="2322" started-at="2023-06-03T20:44:01 IST" finished-at="2023-06-03T20:44:03 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="launchBrowser(java.lang.String)[pri:1, instance:UIANDRESTASSURED.PostmethodResponse@58a90037]" name="launchBrowser" duration-ms="15903" started-at="2023-06-03T20:44:03 IST" finished-at="2023-06-03T20:44:19 IST">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- launchBrowser -->
-        <test-method status="PASS" signature="PostMethodResponseCreatedSuccessfully()[pri:2, instance:UIANDRESTASSURED.PostmethodResponse@5e955596]" name="PostMethodResponseCreatedSuccessfully" duration-ms="2344" started-at="2023-06-02T18:29:49 IST" finished-at="2023-06-02T18:29:51 IST">
+        <test-method status="PASS" signature="PostMethodResponseCreatedSuccessfully()[pri:2, instance:UIANDRESTASSURED.PostmethodResponse@58a90037]" name="PostMethodResponseCreatedSuccessfully" duration-ms="4617" started-at="2023-06-03T20:44:19 IST" finished-at="2023-06-03T20:44:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostMethodResponseCreatedSuccessfully -->
-        <test-method status="PASS" signature="GetmethodResponse()[pri:3, instance:UIANDRESTASSURED.PostmethodResponse@5e955596]" name="GetmethodResponse" duration-ms="301" started-at="2023-06-02T18:29:51 IST" finished-at="2023-06-02T18:29:52 IST">
+        <test-method status="PASS" signature="GetmethodResponse()[pri:3, instance:UIANDRESTASSURED.PostmethodResponse@58a90037]" name="GetmethodResponse" duration-ms="1320" started-at="2023-06-03T20:44:24 IST" finished-at="2023-06-03T20:44:25 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- GetmethodResponse -->
-        <test-method status="PASS" signature="PostMethodResponse()[pri:4, instance:UIANDRESTASSURED.PostmethodResponse@5e955596]" name="PostMethodResponse" duration-ms="521" started-at="2023-06-02T18:29:52 IST" finished-at="2023-06-02T18:29:52 IST">
+        <test-method status="PASS" signature="PostMethodResponse()[pri:4, instance:UIANDRESTASSURED.PostmethodResponse@58a90037]" name="PostMethodResponse" duration-ms="1460" started-at="2023-06-03T20:44:25 IST" finished-at="2023-06-03T20:44:27 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PostMethodResponse -->
-        <test-method status="PASS" signature="PatchMethodResponse()[pri:5, instance:UIANDRESTASSURED.PostmethodResponse@5e955596]" name="PatchMethodResponse" duration-ms="534" started-at="2023-06-02T18:29:52 IST" finished-at="2023-06-02T18:29:53 IST">
+        <test-method status="PASS" signature="PatchMethodResponse()[pri:5, instance:UIANDRESTASSURED.PostmethodResponse@58a90037]" name="PatchMethodResponse" duration-ms="1210" started-at="2023-06-03T20:44:27 IST" finished-at="2023-06-03T20:44:28 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PatchMethodResponse -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:UIANDRESTASSURED.PostmethodResponse@58a90037]" name="teardown" is-config="true" duration-ms="0" started-at="2023-06-03T20:44:28 IST" finished-at="2023-06-03T20:44:28 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
       </class> <!-- UIANDRESTASSURED.PostmethodResponse -->
     </test> <!-- PostmethodResponse -->
   </suite> <!-- Suite -->

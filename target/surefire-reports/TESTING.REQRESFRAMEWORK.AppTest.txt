@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TESTING.REQRESFRAMEWORK.AppTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.056 s - in TESTING.REQRESFRAMEWORK.AppTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 27.4 s - in TESTING.REQRESFRAMEWORK.AppTest

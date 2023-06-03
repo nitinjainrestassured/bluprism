@@ -12,6 +12,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -36,13 +38,25 @@ public class PostmethodResponse {
 	Getresponse getResponse;
 	PutResponsePojo putresponsePOJO;
 	PatchResponsePojo patchresponsePojo ;
+	WebDriver driver;
+	
+	
+	
+	//UI AUTOMATION TestCases
+	@BeforeTest
+	@Parameters("browser")
+	public void setup(@Optional("chrome") String browser) {
+		if (browser.equals("chrome")) {
+			driver = new ChromeDriver();
+		} 
+	}
 
 	@Test(priority = 1)
 
-	public void launchBrowser() throws InterruptedException {
+	public void launchBrowser(@Optional("chrome") String browser) throws InterruptedException {
 
 		System.setProperty("webdriver.Chrome.driver", "C:\\Users\\Tutorbin\\Desktop\\Selenium\\chromedriver.exe");
-		WebDriver driver = new ChromeDriver();
+		//WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 		driver.manage().window().maximize();
 		driver.get("https://www.google.com/");
@@ -56,6 +70,16 @@ public class PostmethodResponse {
 		driver.quit();
 
 	}
+	
+	
+	
+	@AfterTest
+	public void teardown() {
+		driver.quit();
+}
+	
+	//API AUTOMATION Test Cases Below Down
+	
 
 	@Test(priority = 2)
 	@Parameters("environment")
